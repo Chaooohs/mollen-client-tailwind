@@ -1,0 +1,11 @@
+.icon {
+  transform: rotate(180deg);
+
+  & rect {
+    @apply transition-all;
+  }
+
+  &:hover rect {
+    @apply stroke-color-icon;
+  }
+}

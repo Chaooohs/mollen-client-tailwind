@@ -1,0 +1,11 @@
+.icon {
+  @apply w-6 h-6 ml-auto cursor-pointer;
+
+  & path {
+    @apply transition-all;
+  }
+
+  &:hover path {
+    @apply fill-color-icon;
+  }
+}

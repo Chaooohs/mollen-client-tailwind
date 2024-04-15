@@ -1,0 +1,33 @@
+.aside {
+  @apply font-circe text-small text-color-text-secondary flex flex-col border-l border-color-divider p-10
+  desktop:border-t  desktop:pb-24
+  mobile:pt-8 mobile:px-4;
+}
+
+.totalprice {
+  @apply font-orchidea text-color-primary;
+}
+
+.hr {
+  width: 100%;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.price {
+  @apply flex mt-8;
+}
+
+.discount {
+  @apply flex mt-5;
+}
+
+.num {
+  @apply text-color-text-primary ml-auto;
+}
+
+.button {
+  @apply btn w-72 mt-8
+    desktop:w-full desktop:fixed desktop:bottom-0 desktop:left-0 desktop:rounded-none;
+}

@@ -1,0 +1,51 @@
+.header {
+  @apply pt-10 px-10 pb-8
+    mobile:pt-5 mobile:px-4;
+}
+
+.about {
+  @apply font-circe text-middle mt-5 
+    mobile:mt-6;
+
+  .b {
+    @apply font-bold uppercase;
+  }
+}
+
+.contacts {
+  @apply grid grid-cols-2 gap-x-[20.17%] border-t border-color-divider pt-8 pr-10 pb-20 ml-10
+    xl:grid-cols-1 xl:gap-y-8
+    laptop:grid-cols-2
+    mobile:grid-cols-1 mobile:pt-8 mobile:px-4 mobile:pb-12 mobile:ml-0;
+}
+
+.title {
+  @apply font-circe text-small text-color-text-secondary capitalize mb-3;
+}
+
+.address {
+  @apply font-circe text-middle;
+}
+
+.time {
+  @apply text-small flex items-center gap-x-2 mt-6
+    mobile:mt-3;
+}
+
+.phone {
+  @apply text-middle tracking-current uppercase transition-all text-color-primary hover:text-color-hover;
+}
+
+.props {
+  @apply border-t border-color-divider pt-8 pr-10 pb-20 ml-10
+    laptop:border-none
+    mobile:pt-11 mobile:px-4 mobile:pb-14 mobile:ml-0;
+
+  .text {
+    @apply font-circe text-middle flex flex-col gap-y-3;
+  }
+}
+
+.map {
+  @apply w-full h-full laptop:h-[500px] mobile:h-[408px];
+}

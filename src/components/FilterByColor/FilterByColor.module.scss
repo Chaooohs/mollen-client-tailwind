@@ -1,0 +1,27 @@
+.box {
+  @apply px-10 mt-10 
+    laptop:px-4 laptop:py-8 laptop:m-0;
+}
+
+.form {
+  @apply max-w-56 flex flex-wrap gap-1.5 mt-4 laptop:mt-5;
+}
+
+.checkbox {
+  & input {
+    @apply hidden;
+
+    &:checked + label {
+      @apply border-[1px] border-color-text-primary;
+    }
+  }
+
+  & label {
+    @apply block p-1 border-[1px] border-white rounded-md transition-all
+      hover:border-color-text-primary;
+  }
+
+  & span {
+    @apply block w-5 h-6 rounded-md cursor-pointer;
+  }
+}

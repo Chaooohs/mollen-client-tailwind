@@ -1,0 +1,61 @@
+.box {
+  @apply w-full h-[72px] flex gap-x-5 items-center bg-white px-10
+    border-b border-color-divider
+    mobile:h-16 mobile:px-4;
+}
+
+.search {
+  width: 100%;
+}
+
+.icon {
+  width: 21px;
+  height: 20px;
+}
+
+.input {
+  @apply w-full h-16 border-none outline-none bg-transparent 
+    text-small text-color-text-secondary tracking-current uppercase;
+}
+
+.clear {
+  & img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.header {
+  @apply pt-10 px-10 pb-14 mobile:pt-5 mobile:px-4 mobile:pb-6;
+}
+
+.request {
+  @apply font-circe text-middle mobile:text-sm mt-6;
+
+  & b {
+    font-weight: bold;
+  }
+}
+
+.layout {
+  @apply flex-auto pl-10 mb-24 mobile:p-0;
+}
+
+.card {
+  @apply flex w-full h-52 border-t border-color-divider pt-2 pr-10 pb-10
+    mobile:py-6 mobile:px-4 mobile:h-32;
+}
+
+.image {
+  @apply w-72 h-full mr-20 mobile:w-20 mobile:h-12 mobile:mr-5;
+
+  & img {
+    @apply h-full object-cover;
+  }
+}
+
+.title {
+  @apply font-circe text-large uppercase w-1/2 text-color-text-primary mt-12
+    mobile:w-full mobile:tracking-normal mobile:normal-case mobile:mt-1
+    mobile:text-color-text-secondary;
+}

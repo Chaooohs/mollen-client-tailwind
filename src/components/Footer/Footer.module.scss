@@ -1,0 +1,43 @@
+.footer {
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+
+  @apply grid grid-rows-[160px] py-16 px-10 
+  font-circe normal-case text-color-text-secondary text-middle border-t border-color-divider
+  laptop:grid-cols-1 laptop:pt-10 laptop:px-4 laptop:pb-9;
+}
+
+.one {
+  @apply capitalize;
+}
+
+.one,
+.two {
+  @apply flex flex-col justify-between;
+
+  & a {
+    @apply w-fit text-color-text-secondary hover:text-color-text-primary;
+  }
+}
+
+.logo {
+  @apply col-start-1 col-end-2 row-start-1 row-end-2 cursor-pointer laptop:justify-self-center;
+}
+
+.copy {
+  @apply col-start-1 col-end-2 row-start-1 row-end-2 self-end flex flex-col
+  laptop:row-start-4 laptop:row-end-5 laptop:flex-row laptop:justify-self-center
+  laptop:items-center laptop:gap-1.5 laptop:mt-11;
+}
+
+.phone {
+  @apply col-start-4 col-end-5 row-start-1 row-end-2 justify-self-end text-color-text-primary
+   font-orchidea text-large tracking-current uppercase
+   laptop:col-start-1 laptop:col-end-2 laptop:row-start-2 laptop:row-end-3 
+   laptop:justify-self-center laptop:mt-8;
+}
+
+.icons {
+  @apply col-start-4 col-end-5 row-start-1 row-end-2 justify-self-end self-end pb-[6px]
+  laptop:col-start-1 laptop:col-end-2 laptop:row-start-3 laptop:row-end-4 laptop:justify-self-center
+  laptop:mt-8;
+}

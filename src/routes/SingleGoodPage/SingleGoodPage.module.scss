@@ -1,0 +1,110 @@
+.layout {
+  @apply grid grid-cols-[1fr_1fr] auto-rows-min pt-16 px-10 mb-64
+    laptop:gap-x-10
+    mobile:grid-cols-1 mobile:pt-10 mobile:mb-24 mobile:px-0;
+}
+
+.gallery {
+  @apply col-start-1 col-end-2 row-start-1 row-end-10
+    laptop:row-start-2 mobile:row-end-3;
+}
+
+.header {
+  @apply col-start-2 col-end-3 row-start-1 row-end-2
+    laptop:col-start-1 laptop:mb-7
+    mobile:col-end-2 mobile:px-4;
+}
+
+.heading {
+  font-size: clamp(28px, 3cqi, 40px);
+  line-height: clamp(40px, 4cqi, 52px);
+  @apply tracking-current uppercase m-0 laptop:text-xlarge mobile:text-[28px] mobile:leading-9;
+}
+
+.wrap {
+  @apply mobile:px-4;
+}
+
+.brand {
+  @apply col-start-2 col-end-3 row-start-2 row-end-3 text-large tracking-[2px] uppercase mt-5
+    laptop:m-0
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-5 mobile:row-end-6 mobile:text-base;
+}
+
+.id {
+  @apply col-start-2 col-end-3 row-start-3 row-end-4
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-4 mobile:row-end-5;
+}
+
+.id,
+.stock {
+  @apply font-circe text-middle text-color-text-secondary uppercase my-3;
+}
+
+.description {
+  @apply font-circe text-middle text-color-text-primary
+    col-start-2 col-end-3 row-start-4 row-end-5 my-6
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-8 mobile:row-end-9;
+}
+
+.rating {
+  @apply col-start-2 col-end-3 row-start-5 row-end-6 mt-6
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-6 mobile:row-end-7 mobile:mt-10;
+}
+
+.stock {
+  @apply col-start-2 col-end-3 row-start-6 row-end-7 lowercase ml-[6px]
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-7 mobile:row-end-8;
+}
+
+.price {
+  @apply col-start-2 col-end-3 row-start-7 row-end-8
+    text-xlarge text-color-primary mt-6 mb-8
+    mobile:text-[28px] leading-9 
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-3 mobile:row-end-4 mobile:mt-10 mobile:mb-6;
+
+  &__box {
+    @apply flex flex-wrap items-end gap-x-12;
+  }
+}
+
+.through {
+  @apply font-circe text-2xl leading-6 line-through text-color-text-secondary;
+}
+
+.box {
+  @apply col-start-2 col-end-3 row-start-8 row-end-9 flex justify-center items-center w-72 h-14 rounded-[60px]
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-10 mobile:row-end-11
+    mobile:w-full mobile:rounded-none;
+}
+
+.button {
+  @apply w-[60%] h-full rounded-e-[60px] text-sm text-white tracking-current uppercase px-8 transition-all
+    hover:bg-color-hover
+    disabled:bg-color-divider disabled:cursor-default;
+}
+
+.counter {
+  @apply grid grid-cols-[2fr_3fr_2fr] items-center w-[40%] h-full font-circe text-middle text-white pl-8;
+}
+
+.minus,
+.plus {
+  @apply h-full flex items-center justify-center text-white transition-all cursor-pointer
+    hover:bg-color-hover
+    disabled:bg-color-divider disabled:cursor-default;
+}
+
+.number {
+  @apply font-circe text-middle justify-center w-full text-center bg-transparent text-white
+    rounded-none outline-none;
+}
+
+.stocknum {
+  @apply text-color-text-primary ml-16;
+}
+
+.size {
+  @apply col-start-2 col-end-3 row-start-9 row-end-10 mt-14 ml-[6px]
+  mobile:col-start-1 mobile:col-end-2 mobile:row-start-9 mobile:row-end-10 mobile:mt-0;
+}

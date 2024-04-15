@@ -1,0 +1,7 @@
+.social {
+  @apply flex gap-x-6;
+
+  & img {
+    @apply w-4 h-4;
+  }
+}

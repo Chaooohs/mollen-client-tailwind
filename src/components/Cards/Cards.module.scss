@@ -1,0 +1,60 @@
+.card {
+  container-type: inline-size;
+  @apply relative border  border-color-divider bg-white transition-all z-20 -m-px;
+
+  &:hover {
+    box-shadow: 0px 4px 24px 0px rgba(46, 67, 108, 0.15);
+    /* box-shadow: 0px 5px 10px 0px rgba(46, 67, 108, 0.15); */
+    z-index: 99;
+  }
+}
+
+.percents {
+  @apply absolute top-3 left-4 w-10 h-5 flex justify-center items-center font-circe 
+    text-xs leading-none text-white bg-color-red;
+}
+
+.image {
+  @apply h-[66.1cqi];
+
+  & img {
+    @apply h-full object-cover;
+  }
+}
+
+.descr {
+  @apply relative grid grid-rows-[4.5fr_1fr_1fr] text-color-text-primary 
+    pt-6 px-10 pb-10 bg-white
+    mobile:grid-rows-[3fr_1fr_1fr] mobile:py-5 mobile:px-4;
+}
+
+.title {
+  @apply text-center mt-0;
+}
+
+.name,
+.brand {
+  @apply block text-small tracking-[2px] uppercase mobile:text-xs;
+}
+
+.price {
+  @apply grid grid-cols-[1fr_2fr_1fr];
+}
+
+.through {
+  @apply self-end font-circe text-base text-center line-through text-color-text-secondary
+    mobile:text-xs mobile:leading-6;
+}
+
+.discount {
+  @apply text-large text-center m-0;
+}
+
+.elem {
+  @apply w-full absolute bg-white;
+  box-shadow: 0px 24px 24px 0px rgba(46, 67, 108, 0.2);
+}
+
+.button {
+  @apply btn w-56 mx-auto mb-8;
+}

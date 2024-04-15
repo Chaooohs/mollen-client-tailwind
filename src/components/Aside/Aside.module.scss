@@ -1,0 +1,76 @@
+.aside {
+  @apply border-r border-color-divider pb-10 
+    laptop:border-0 laptop:absolute z-[1500] laptop:inset-0 laptop:overflow-auto laptop:bg-white
+    laptop:pb-0 laptop:grid laptop:grid-rows-[auto_auto_auto_auto_1fr];
+}
+
+.header {
+  @apply laptop:flex laptop:justify-between laptop:items-center laptop:h-16 
+    laptop:border-b laptop:border-color-divider laptop:px-4;
+}
+
+.box {
+  @apply mt-10 pl-10
+    laptop:border-b laptop:border-color-divider
+    laptop:gap-y-4 laptop:px-4 laptop:py-8 laptop:m-0;
+}
+
+.title {
+  /* @apply mb-4 laptop:m-0; */
+}
+
+.form {
+  @apply flex flex-col gap-y-4 mt-4 laptop:mt-5;
+}
+
+.label {
+  @apply font-circe text-middle flex capitalize text-color-primary cursor-pointer;
+}
+
+.input {
+  @apply hidden;
+}
+
+.label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("/public/images/svg/radio.svg") 0 0 / auto auto no-repeat;
+  margin-right: 12px;
+}
+
+.input:checked + .label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("/public//images//svg/radio-checked.svg") 0 0 / auto auto no-repeat;
+}
+
+.img {
+  @apply w-5;
+}
+
+.button {
+  @apply laptop:btn laptop:rounded-none;
+}
+
+@media (max-width: 991px) {
+  .label::before {
+    display: none;
+  }
+
+  .label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("/public/images/svg/radio.svg") 0 0 / auto auto no-repeat;
+    margin-left: auto;
+  }
+
+  .input:checked + .label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("/public//images//svg/radio-checked.svg") 0 0 / auto auto no-repeat;
+  }
+}

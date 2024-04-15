@@ -1,0 +1,33 @@
+.heading {
+  @apply text-small tracking-[2px] uppercase mb-9 ml-10 mobile:ml-4;
+}
+
+.layout {
+  @apply flex overflow-x-auto;
+}
+
+.card {
+  @apply grid grid-cols-[auto_1fr] items-center gap-x-5 h-28
+    border-t border-r border-color-divider px-10 transition-all
+    laptop:px-4;
+
+  &:hover {
+    box-shadow: 0px 4px 24px 0px rgba(46, 67, 108, 0.15);
+  }
+  &:hover .title {
+    @apply text-color-text-primary;
+  }
+}
+
+.img {
+  @apply w-28 h-20;
+
+  & img {
+    @apply h-full object-cover;
+  }
+}
+
+.title {
+  @apply font-circe text-small uppercase text-color-text-secondary
+    hover:text-color-text-primary ml-4;
+}

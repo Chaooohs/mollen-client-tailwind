@@ -1,0 +1,30 @@
+.item {
+  @apply w-3/4 border-t border-color-divider py-6 ml-10
+    mobile:w-full mobile:py-8 mobile:px-4 mobile:ml-0;
+}
+
+.title {
+  @apply flex items-center justify-between cursor-pointer;
+
+  .text {
+    @apply text-small uppercase mr-10 tracking-widest;
+  }
+}
+
+.icon {
+  @apply ml-10 transition-all
+    mobile:ml-0;
+
+  img {
+    @apply w-3 h-3;
+  }
+}
+
+.content {
+@apply font-circe text-middle overflow-hidden pr-24 transition-all
+  mobile:px-4;
+
+  b {
+    @apply font-bold;
+  }
+}

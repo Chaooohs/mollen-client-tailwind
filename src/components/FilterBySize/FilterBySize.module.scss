@@ -1,0 +1,29 @@
+.box {
+  @apply px-10 mt-10 
+    laptop:px-4 laptop:py-8 laptop:m-0
+    laptop:border-b laptop:border-color-divider;
+}
+
+.form {
+  @apply max-w-72 flex flex-wrap gap-2 mt-4 laptop:mt-5;
+}
+
+.checkbox {
+  & > input {
+    @apply hidden;
+
+    &:checked + span {
+      @apply border-[1px] border-color-text-primary;
+    }
+  }
+
+  & > span {
+    @apply transition-all cursor-pointer border-[1px] border-color-divider
+    hover:border-color-text-primary;
+  }
+}
+
+.cell {
+  @apply text-small uppercase w-fit min-w-16 h-8 flex justify-center items-center px-2 tracking-[1px]
+    mobile:min-w-14 mobile:h-6 mobile:text-xs
+}

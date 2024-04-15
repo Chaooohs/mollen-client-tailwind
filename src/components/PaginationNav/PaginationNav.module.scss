@@ -1,0 +1,18 @@
+.box {
+  @apply flex mb-24 px-10 mobile:mb-14 mobile:px-4;
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  @apply text-small text-color-text-primary uppercase flex justify-center items-center 
+    w-12 h-12 rounded-3xl mr-4 transition-all cursor-pointer
+    border border-color-divider hover:border-color-text-primary 
+    laptop:w-10 laptop:h-10;
+}
+
+.input:checked + label {
+  @apply border border-color-text-primary;
+}

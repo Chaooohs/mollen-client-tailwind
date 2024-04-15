@@ -1,0 +1,44 @@
+.gallery {
+  @apply flex items-end h-[45.42cqi]
+    laptop:flex-col laptop:items-start laptop:h-auto
+    mobile:flex-row mobile:px-4
+    xs:flex-col xs:p-0;
+}
+
+.navigation {
+  @apply flex flex-col justify-between items-center gap-y-12 h-full
+    laptop:order-2 laptop:overflow-x-auto laptop:w-[46vw]
+    mobile:overflow-x-hidden mobile:w-24
+    xs:w-screen xs:overflow-x-auto;
+
+  &__buttons {
+    @apply flex flex-col gap-y-3;
+  }
+}
+
+.previos {
+  @apply flex flex-col gap-1
+    laptop:flex-row laptop:mt-16 laptop:ml-auto
+    mobile:flex-col mobile:mt-0 mobile:ml-4
+    xs:flex-row xs:mt-4 xs:ml-auto;
+
+  &__box {
+    @apply w-14 h-14 cursor-pointer p-2
+      laptop:w-16 laptop:h-16;
+  }
+
+  &__img {
+    @apply h-full object-cover;
+  }
+}
+
+.image {
+  @apply h-full mx-10
+    laptop:order-1 laptop:w-full laptop:m-0
+    mobile:w-auto
+    xs:w-full;
+
+  &__img {
+    @apply h-full object-cover;
+  }
+}

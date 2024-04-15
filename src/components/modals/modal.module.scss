@@ -1,0 +1,17 @@
+.modal {
+  @apply absolute top-0 right-0 bottom-0 left-0 z-50 flex justify-center items-center bg-[#0000000f];
+}
+
+.content {
+  @apply flex flex-col max-w-[40%] w-full bg-white
+    mobile:max-w-[320px];
+  box-shadow: 0px 4px 24px 0px rgba(46, 67, 108, 0.15);
+}
+
+.text {
+  @apply flex-auto flex flex-col p-7 normal-case;
+}
+
+.box {
+  @apply flex w-full text-sm;
+}

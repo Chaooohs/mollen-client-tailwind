@@ -1,0 +1,25 @@
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  @apply text-small text-color-text-secondary tracking-current uppercase flex justify-center items-center
+    w-full h-20 cursor-pointer hover:text-color-text-primary
+    border-t border-r border-b border-color-divider
+    laptop:h-16;
+}
+
+.input:checked + label {
+  @apply bg-color-bg-light text-color-text-primary;
+}
+
+@media (max-width: 400px) {
+  .box {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}

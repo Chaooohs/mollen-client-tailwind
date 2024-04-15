@@ -1,0 +1,16 @@
+.box {
+  @apply font-circe text-small relative flex flex-col justify-center max-w-72 w-full h-20 px-10
+    text-color-text-primary cursor-pointer laptop:h-16 laptop:px-4;
+}
+
+.value {
+  @apply underline underline-offset-4 ml-1;
+}
+
+.list {
+  @apply absolute z-50 top-3/4 list-none bg-white p-0;
+}
+
+.item {
+  @apply p-3 hover:bg-color-divider;
+}

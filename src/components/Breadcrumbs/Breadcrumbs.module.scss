@@ -1,0 +1,16 @@
+.breadcrumbs {
+  @apply font-circe text-small text-color-text-secondary text-left capitalize mb-4
+    laptop:mb-5;
+}
+
+.ul {
+  @apply flex flex-wrap list-none p-0 m-0;
+
+  & span {
+    @apply mr-2;
+  }
+}
+
+.link {
+  @apply text-color-text-primary cursor-pointer hover:underline hover:underline-offset-4;
+}

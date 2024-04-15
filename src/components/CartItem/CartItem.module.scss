@@ -1,0 +1,89 @@
+.card {
+  @apply grid grid-cols-[1fr_1fr_2fr_1fr_1fr] grid-rows-[1fr_1fr] gap-x-4
+    border-t border-b border-color-divider py-5 px-10 -m-px
+    desktop:grid-cols-[1fr_1fr_2fr_2fr_0fr] desktop:grid-rows-[2fr_0fr] desktop:gap-x-6 desktop:gap-y-5
+    mobile:grid-cols-[1fr_0fr_3fr_1fr_0fr] mobile:gap-x-5 mobile:py-9 mobile:px-4;
+}
+
+.img {
+  @apply col-start-1 col-end-3 row-start-1 row-end-3 h-36
+    desktop:row-end-2
+    mobile:h-14;
+
+  & img {
+    @apply h-full object-cover aspect-[2/1];
+  }
+}
+
+.box {
+  @apply col-start-3 col-end-4 row-start-1 row-end-3 flex flex-col self-center gap-y-4 ml-3
+    desktop:col-end-6 desktop:row-end-2 desktop:mr-32
+    mobile:m-0;
+}
+
+.title {
+  @apply text-xs tracking-current uppercase m-0 
+    mobile:tracking-[2px];
+}
+
+.size {
+  @apply border border-color-divider w-fit min-w-16 h-8 px-2 flex justify-center items-center
+    text-small tracking-[3px];
+}
+
+.counter,
+.price {
+  @apply text-color-text-secondary;
+}
+
+.counter {
+  @apply col-start-4 col-end-5 row-start-1 row-end-3 justify-self-center self-center w-16 h-7
+    grid grid-cols-[1fr_1fr_1fr] justify-items-center items-center rounded-[60px] bg-color-bg-light
+    desktop:col-start-1 desktop:col-end-2 desktop:row-start-2 desktop:justify-self-start;
+}
+
+.number {
+  @apply w-full text-sm text-center border-none outline-none bg-transparent p-0 font-circe text-color-icon;
+}
+
+.minus,
+.plus {
+  @apply w-full h-full flex justify-center items-center transition-all font-bold text-sm text-color-icon;
+}
+
+.minus {
+  border-radius: 60px 0 0 60px;
+}
+
+.plus {
+  border-radius: 0 60px 60px 0;
+}
+
+.minus:hover,
+.plus:hover {
+  @apply text-white bg-color-icon-secondary;
+}
+
+.discount {
+  @apply grid col-start-5 col-end-6 row-start-1 row-end-3 justify-self-end self-center text-large uppercase
+  desktop:row-start-2 desktop:col-start-3 desktop:col-end-4 desktop:justify-self-start
+  mobile:tracking-[2px];
+}
+
+.price {
+  @apply font-circe text-small leading-[22px]
+    grid col-start-5 col-end-6 row-start-2 row-end-3 justify-self-end items-center line-through mr-1
+    desktop:col-start-4 desktop:col-end-5 desktop:justify-self-start desktop:items-end
+    mobile:-ml-5;
+}
+
+.icon {
+  @apply grid col-start-5 col-end-6 row-start-1 row-end-2 justify-self-end self-start w-6 h-6
+    transition-all cursor-pointer
+    hover:fill-color-icon
+    mobile:row-start-2 mobile:row-end-3 mobile:self-center;
+
+  & rect {
+    @apply transition-all;
+  }
+}

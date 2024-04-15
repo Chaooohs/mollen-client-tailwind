@@ -1,0 +1,23 @@
+.section {
+  @apply grid grid-rows-[0fr_0fr_0fr_2fr] laptop:grid-rows-[0fr_0fr_0fr_0fr_2fr];
+}
+
+.header {
+  @apply pt-10 px-10 pb-14 mobile:pt-5 mobile:px-4 mobile:pb-7;
+}
+
+.filters {
+  @apply h-16 flex items-center px-10 mobile:px-4;
+
+  &__button {
+    @apply flex items-center;
+  }
+
+  &__icon {
+    @apply w-5 mr-5;
+  }
+
+  &__text {
+    @apply text-small uppercase tracking-[3px]
+  }
+}

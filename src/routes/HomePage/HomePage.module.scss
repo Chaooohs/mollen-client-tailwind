@@ -1,0 +1,74 @@
+.main {
+  container-type: inline-size;
+  background-color: whitesmoke;
+  @apply -mb-px flex-auto;
+}
+
+.categories {
+  @apply bg-home bg-no-repeat bg-center bg-cover relative z-10 h-screen 
+      flex flex-col justify-center items-center 
+      laptop:h-auto laptop:px-10 laptop:pt-20 laptop:pb-12
+      mobile:px-5 mobile:pb-9;
+}
+
+.list {
+  @apply grid grid-rows-5 grid-cols-4 max-w-6xl h-[43cqi] p-0 w-4/5 mobile:w-full
+  mobile:h-auto mobile:grid-cols-1 mobile:auto-rows-auto;
+}
+
+.link {
+  @apply text-lg uppercase text-white tracking-current flex items-center gap-x-6 
+  mobile:text-base;
+
+  &:nth-child(1) {
+    @apply row-span-1 col-start-2 col-end-4
+    mobile:col-span-1 mobile:justify-self-center;
+  }
+
+  &:nth-child(2) {
+    @apply row-start-3 row-end-4 col-start-1 col-end-3 ml-10
+    mobile:ml-0 mobile:col-span-1 mobile:row-start-2;
+  }
+
+  &:nth-child(3) {
+    @apply row-start-5 row-end-6 col-start-1 col-end-3
+    mobile:col-span-1;
+  }
+
+  &:nth-child(4) {
+    @apply row-start-4 row-end-5 col-start-4 col-end-5
+    mobile:col-span-1 mobile:justify-self-end;
+
+    & svg {
+      @apply mobile:order-2;
+    }
+
+    & span {
+      @apply mobile:order-1;
+    }
+  }
+
+  &:hover circle:first-of-type {
+    fill: #426bbd;
+  }
+}
+
+.circle {
+  @apply w-14 mobile:w-10;
+
+  & circle:first-of-type {
+    transition: all 0.2s linear;
+  }
+}
+
+.flover {
+  @apply w-12 mt-[5.5%] mx-auto mb-0 mobile:w-10;
+}
+
+.popular {
+  @apply pl-14 mt-28 laptop:pl-0 mobile:my-7 mobile:mx-0;
+}
+
+.title {
+  @apply text-xlarge uppercase mb-14 ml-14 mobile:mt-0 mobile:mr-0 mobile:mb-7 mobile:ml-4 mobile:text-2xl;
+}
