@@ -6,25 +6,36 @@
 .title {
   @apply flex items-center justify-between cursor-pointer;
 
-  .text {
+  & .text {
     @apply text-small uppercase mr-10 tracking-widest;
   }
-}
 
-.icon {
-  @apply ml-10 transition-all
-    mobile:ml-0;
+  & .icon {
+    transition: all 0.5s ease;
+    @apply ml-10
+      mobile:ml-0;
 
-  img {
-    @apply w-3 h-3;
+    & img {
+      @apply w-3 h-3;
+    }
   }
 }
 
-.content {
-@apply font-circe text-middle overflow-hidden pr-24 transition-all
-  mobile:px-4;
+.body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease;
 
-  b {
-    @apply font-bold;
+  & .content {
+    @apply font-circe text-middle pr-24 mt-6
+    mobile:px-4;
+  
+    & b {
+      @apply font-bold;
+    }
   }
+}
+
+.open {
+  grid-template-rows: 1fr;
 }
