@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { CSSTransition } from "react-transition-group";
 import Rating from '@mui/material/Rating';
 
 import { getDiscount } from "../../utils";
@@ -8,13 +7,33 @@ import styles from "./Cards.module.scss";
 
 export const Cards = ({ el }) => {
   const isLaptop = useMediaQuery({ maxWidth: 992 })
-  let [inProp, setInProp] = useState(false)
+  let [isMouse, setIsMouse] = useState(false)
+  let [isOpen, setIsOpen] = useState(false)
+  const ref = useRef()
+
+  useEffect(() => {
+    setIsOpen(true)
+
+    if (isMouse) {
+      setTimeout(() => {
+        ref.current.classList.add(`${styles.open}`)
+      }, 50)
+    }
+
+    else if (!isMouse && ref.current) {
+      ref.current.classList.remove(`${styles.open}`)
+      setTimeout(() => {
+        setIsOpen(false)
+      }, 250)
+    }
+
+  }, [isMouse])
 
   return (
     <div
       className={styles.card}
-      onMouseEnter={() => setInProp(true)}
-      onMouseLeave={() => setInProp(false)}
+      onMouseEnter={() => setIsMouse(true)}
+      onMouseLeave={() => setIsMouse(false)}
     >
       {
         el.discountPercentage > 0 &&
@@ -55,19 +74,16 @@ export const Cards = ({ el }) => {
         }
       </div>
       {
-        !isLaptop &&
-        <CSSTransition
-          in={inProp}
-          timeout={0}
-          classNames={'card-elem'}
-          unmountOnExit
-        >
-          <div className={styles.elem} >
-            <button className={styles.button} >
-              Детальніше
-            </button>
+        !isLaptop && isOpen &&
+        <div className={styles.body} ref={ref}>
+          <div className="overflow-hidden">
+            <div className={styles.elem} >
+              <button className={styles.button} >
+                Детальніше
+              </button>
+            </div>
           </div>
-        </CSSTransition>
+        </div>
       }
     </div>
   );

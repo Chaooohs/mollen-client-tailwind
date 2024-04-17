@@ -22,12 +22,12 @@
 
 .popup {
   @apply bg-white mt-4;
-}
-
-.list {
-  @apply list-none m-0 p-0;
-}
-
-.item {
-  @apply p-3 hover:bg-color-divider tracking-[2px];
+  
+  .list {
+    @apply list-none m-0 p-0;
+    
+    .item {
+      @apply p-3 hover:bg-color-divider tracking-[2px];
+    }
+  }
 }

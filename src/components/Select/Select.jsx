@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { setSizeSinglePage } from '../../redux'
@@ -9,8 +9,10 @@ import styles from './Select.module.scss'
 export const Select = ({ data }) => {
   const dispatch = useDispatch()
   const { size } = useSelector(state => state.sizeSinglePage)
+  const [isToggle, setIsToggle] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [isLength, setIsLength] = useState(true)
+  const ref = useRef()
 
   useEffect(() => {
     dispatch(setSizeSinglePage(""))
@@ -23,10 +25,28 @@ export const Select = ({ data }) => {
     }
   }, [data])
 
+  useEffect(() => {
+    setIsOpen(true)
+
+    if (isToggle) {
+      setTimeout(() => {
+        ref.current.classList.add("accordion__open")
+      }, 50)
+    }
+
+    else if (!isToggle && ref.current) {
+      ref.current.classList.remove("accordion__open")
+      setTimeout(() => {
+        setIsOpen(false)
+      }, 550)
+    }
+
+  }, [isToggle])
+
 
   return (
     <div
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={() => setIsToggle(!isToggle)}
       className={`${styles.box} ${Array.isArray(data) && isLength ? styles.border : ""}`}
     >
       <div className={styles.label}>
@@ -44,23 +64,27 @@ export const Select = ({ data }) => {
 
       {
         isOpen && isLength &&
-        <div className={styles.popup}>
-          <ul className={styles.list}>
-            {
-              Array.isArray(data) && isOpen &&
-              data.map(el => {
-                return (
-                  <li
-                    key={el}
-                    className={styles.item}
-                    onClick={() => dispatch(setSizeSinglePage(el))}
-                  >
-                    {el}
-                  </li>
-                )
-              })
-            }
-          </ul>
+        <div className="accordion" ref={ref} >
+          <div className="accordion__hidden">
+            <div className={styles.popup} >
+              <ul className={styles.list}>
+                {
+                  Array.isArray(data) && isOpen &&
+                  data.map(el => {
+                    return (
+                      <li
+                        key={el}
+                        className={styles.item}
+                        onClick={() => dispatch(setSizeSinglePage(el))}
+                      >
+                        {el}
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </div>
+          </div>
         </div>
       }
     </div >

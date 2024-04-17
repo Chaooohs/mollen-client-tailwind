@@ -1,7 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive'
 import { useSelector } from "react-redux";
-import { Transition } from "react-transition-group";
 
 import { Aside, BurgerMenu, ClearCart, ErrorModal, Footer, Header, LimitGoodsModal, RemoveCartItem } from "../components";
 
@@ -37,11 +36,10 @@ export const Root = () => {
         <LimitGoodsModal />
       }
 
-      <Transition in={burger} timeout={300} unmountOnExit>
-        {state => (
-          <BurgerMenu state={state}/>
-        )}
-      </Transition>
+      { 
+        burger &&
+        <BurgerMenu />
+      }
 
       {
         error &&

@@ -111,6 +111,20 @@ input:-webkit-autofill:focus {
   text-transform: lowercase;
 }
 
+.accordion {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease;
+
+  &__hidden {
+    overflow: hidden;
+  }
+
+  &__open {
+    grid-template-rows: 1fr;
+  }
+}
+
 .accordion__header {
   width: 75%;
   padding: 40px 0 44px;
@@ -180,7 +194,7 @@ input:-webkit-autofill:focus {
 
 /* #region transition */
 
-.entering,
+/* .entering,
 .entered {
   transform: translateX(0);
   transition: transform 300ms;
@@ -190,35 +204,41 @@ input:-webkit-autofill:focus {
 .exited {
   transform: translateX(-100%);
   transition: transform 300ms;
-}
+} */
 
-.card-elem {
+/* .card-elem {
   &-enter {
     opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-  }
+    /* max-height: 0; */
+    /* grid-template-rows: 0fr; */
+    /* overflow: hidden; */
+  /* } */
 
-  &-enter-done {
-    opacity: 1;
-    max-height: 500px;
-    transition: opacity 250ms, max-height 300ms, box-shadow 300ms;
-  }
+  /* &-enter-done { */
+    /* opacity: 1; */
+    /* max-height: 500px; */
+    /* grid-template-rows: 1fr; */
+    /* transition: opacity 250ms, max-height 300ms, box-shadow 300ms; */
+    /* transition: all 1s linear; */
+  /* } */
 
-  &-exit {
+  /* &-exit { */
+    /* opacity: 0;
+    /* max-height: 500px; */
+    /* grid-template-rows: 1fr; */
+    /* transition: opacity 250ms, max-height 300ms, box-shadow 300ms; */
+    /* transition: all 1s linear; */
+  /* } */ 
+
+  /* &-exit-done {
     opacity: 0;
-    max-height: 500px;
-    transition: opacity 250ms, max-height 300ms, box-shadow 300ms;
-  }
+    /* grid-template-rows: 0fr; */
+    /* overflow: hidden; */
+    /* max-height: 0; */
+  /* } */ 
+/* } */ 
 
-  &-exit-done {
-    opacity: 0;
-    overflow: hidden;
-    max-height: 0;
-  }
-}
-
-.accordion-open {
+/* .accordion-open {
   &-enter {
     opacity: 0;
     max-height: 0;
@@ -245,7 +265,7 @@ input:-webkit-autofill:focus {
     max-height: 0;
     overflow: hidden;
   }
-}
+} */
 
 .selector {
   &-enter {

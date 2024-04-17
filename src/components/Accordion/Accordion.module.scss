@@ -21,21 +21,11 @@
   }
 }
 
-.body {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s ease;
-
-  & .content {
-    @apply font-circe text-middle pr-24 mt-6
+.popup {
+  @apply font-circe text-middle pr-24 mt-6
     mobile:px-4;
-  
-    & b {
-      @apply font-bold;
-    }
-  }
-}
 
-.open {
-  grid-template-rows: 1fr;
+  & b {
+    @apply font-bold;
+  }
 }
