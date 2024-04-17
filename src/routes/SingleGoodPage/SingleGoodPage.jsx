@@ -15,12 +15,10 @@ export const SingleGoodPage = () => {
   const cartBtnRef = useRef()
   const params = useParams();
   const dispatch = useDispatch()
-  const cartItem = useSelector(state => state.cart.items);
   const size = useSelector(state => state.sizeSinglePage.size)
 
   const { data: singleGood } = useGetSingleProductQuery(`/catalog/${params.id}`);
 
-  const [disabled, setDisabled] = useState(false);
   const [count, setCount] = useState(1);
 
   useEffect(() => {
@@ -29,12 +27,8 @@ export const SingleGoodPage = () => {
   }, [singleGood]);
 
   useEffect(() => {
-    cartItem?.find((el) => {
-      if (el.id === singleGood?.id) {
-        setDisabled(true);
-      }
-    });
-  }, [singleGood, cartItem]);
+    setCount(1)
+  }, [size])
 
   useEffect(() => window.scrollTo(0, 0), [])
 
@@ -141,9 +135,14 @@ export const SingleGoodPage = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.box} style={!disabled ? { backgroundColor: '#4E76C6' } : { backgroundColor: '#ECEAE7' }}>
+            <div
+              className={styles.box}
+            >
               <div className={styles.counter} >
-                <button className={styles.minus} onClick={decrement} disabled={disabled} >
+                <button
+                  className={styles.minus}
+                  onClick={decrement}
+                >
                   -
                 </button>
 
@@ -152,10 +151,13 @@ export const SingleGoodPage = () => {
                   className={styles.number}
                   value={count}
                   onChange={handleChange}
-                  disabled={disabled}
                 />
 
-                <button ref={plusRef} className={styles.plus} onClick={increment} disabled={disabled}>
+                <button
+                  ref={plusRef}
+                  className={styles.plus}
+                  onClick={increment}
+                >
                   +
                 </button>
               </div>
@@ -163,12 +165,18 @@ export const SingleGoodPage = () => {
                 ref={cartBtnRef}
                 className={styles.button}
                 onClick={() => handleClickAddToCart(singleGood.id, singleGood.thumbnail, singleGood.title, singleGood.price, singleGood.discountPercentage, singleGood.stock, size)}
-                disabled={disabled}>
+              >
                 <span>у кошик</span>
               </button>
             </div>
-            <div className={styles.size}>
-              <Select data={singleGood.size} />
+            <div className={styles.wrap}>
+              <div className={styles.color}>
+                <div className="font-circe text-middle text-color-text-secondary">Колір</div>
+                <div className="capitalize tracking-[1px] ml-16">{categoryUkr(singleGood.color)}</div>
+              </div>
+              <div className={styles.size}>
+                <Select data={singleGood.size} />
+              </div>
             </div>
           </>
         )}

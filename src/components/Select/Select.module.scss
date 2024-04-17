@@ -1,7 +1,6 @@
 .box {
   @apply relative max-w-xl w-full py-5 font-circe text-middle text-color-text-secondary
     laptop:mb-9 laptop:py-4;
-  /* max-width: 586px; */
 }
 
 .border {
@@ -9,15 +8,17 @@
 }
 
 .label {
-  @apply flex items-center mobile:px-4;
+  @apply grid grid-cols-[116px_1fr] items-center;
 }
 
 .value {
-  @apply text-color-text-primary ml-16;
+  @apply font-orchidea tracking-[2px] text-color-text-primary ml-16
+    row-start-1 row-end-2 col-start-2 col-end-3;
 }
 
 .icon {
-  @apply w-2 ml-auto transition-all;
+  @apply w-2 ml-auto row-start-1 row-end-2 col-start-2 col-end-3;
+    transition: all 0.5s ease;
 }
 
 .popup {

@@ -9,22 +9,31 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     setCartItems: (state, action) => {
-      const found = state.items.find(el => el.id === action.payload.id)
-      
-      if(!found) {
+      const found = state.items.find(el => el.id === action.payload.id && el.size === action.payload.size);
+
+      if (!found) {
         return {
           ...state,
           items: [...state.items, action.payload],
-        }
+        };
       }
+
+      state.items.map((el) => {
+        return el.id === action.payload.id && el.size === action.payload.size
+          ? {
+              ...el,
+              count: el.count = action.payload.count,
+            }
+          : el;
+      });
     },
     setIncrement: (state, action) => {
       state.items.map((el) => {
         return el.id === action.payload
           ? {
-            ...el,
-            count: el.count++,
-          }
+              ...el,
+              count: el.count++,
+            }
           : el;
       });
     },
@@ -32,9 +41,9 @@ export const cartSlice = createSlice({
       state.items.map((el) => {
         return el.id === action.payload
           ? {
-            ...el,
-            count: el.count > 1 ? el.count-- : 1,
-          }
+              ...el,
+              count: el.count > 1 ? el.count-- : 1,
+            }
           : el;
       });
     },
@@ -42,9 +51,9 @@ export const cartSlice = createSlice({
       state.items.map((el) => {
         return el.id === action.payload.id
           ? {
-            ...el,
-            count: el.count = action.payload.value,
-          }
+              ...el,
+              count: (el.count = action.payload.value),
+            }
           : el;
       });
     },
@@ -57,5 +66,6 @@ export const cartSlice = createSlice({
   },
 });
 
-export const { setCartItems, setIncrement, setDecrement, setRemoveCartItem, setClearCart, setCartCount } = cartSlice.actions;
+export const { setCartItems, setIncrement, setDecrement, setRemoveCartItem, setClearCart, setCartCount } =
+  cartSlice.actions;
 export default cartSlice.reducer;

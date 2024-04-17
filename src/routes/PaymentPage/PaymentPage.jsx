@@ -4,7 +4,7 @@ import { paymentData } from '../../utils'
 export const PaymentPage = () => {
   return (
     <main className="main">
-      <header className="accordion__header" >
+      <header className="header-info" >
       <Breadcrumbs current={"доставка"}/>
         <h1 className="txt-xl mg-0" >доставка та оплата</h1>
       </header>

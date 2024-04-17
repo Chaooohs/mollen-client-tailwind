@@ -9,6 +9,7 @@ import styles from './Select.module.scss'
 export const Select = ({ data }) => {
   const dispatch = useDispatch()
   const { size } = useSelector(state => state.sizeSinglePage)
+  const { items } = useSelector(state => state.cart);
   const [isToggle, setIsToggle] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [isLength, setIsLength] = useState(true)
@@ -16,7 +17,7 @@ export const Select = ({ data }) => {
 
   useEffect(() => {
     dispatch(setSizeSinglePage(""))
-  }, [])
+  }, [items])
 
   useEffect(() => {
     if (Array.isArray(data) && data.length === 1) {
@@ -43,6 +44,7 @@ export const Select = ({ data }) => {
 
   }, [isToggle])
 
+  console.log(data)
 
   return (
     <div
@@ -51,12 +53,12 @@ export const Select = ({ data }) => {
     >
       <div className={styles.label}>
         <div >{Array.isArray(data) && isLength ? "Оберiть ромiр" : "Розмiр"}</div>
-        <div className={styles.value}>{size}</div>
+        <div className={styles.value}>{size.replace('-', '*')}</div>
         {
           Array.isArray(data) && isLength &&
           <div
             className={styles.icon}
-            style={isOpen ? { transform: 'rotate(180deg)' } : null}>
+            style={isToggle ? { transform: 'rotate(180deg)' } : null}>
             <img src={bird} alt='arrow' />
           </div>
         }

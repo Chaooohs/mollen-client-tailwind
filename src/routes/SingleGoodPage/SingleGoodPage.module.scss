@@ -74,30 +74,31 @@
 
 .box {
   @apply col-start-2 col-end-3 row-start-8 row-end-9 flex justify-center items-center w-72 h-14 rounded-[60px]
-    mobile:col-start-1 mobile:col-end-2 mobile:row-start-10 mobile:row-end-11
-    mobile:w-full mobile:rounded-none;
-}
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-11 mobile:row-end-12
+    mobile:w-full mobile:rounded-none
+    bg-color-primary;
 
-.button {
-  @apply w-[60%] h-full rounded-e-[60px] text-sm text-white tracking-current uppercase px-8 transition-all
-    hover:bg-color-hover
-    disabled:bg-color-divider disabled:cursor-default;
-}
+  .button {
+    @apply w-[60%] h-full rounded-e-[60px] text-sm text-white tracking-current uppercase px-8 transition-all
+      hover:bg-color-hover
+      disabled:bg-color-divider disabled:cursor-default;
+  }
 
-.counter {
-  @apply grid grid-cols-[2fr_3fr_2fr] items-center w-[40%] h-full font-circe text-middle text-white pl-8;
-}
+  .counter {
+    @apply grid grid-cols-[2fr_3fr_2fr] items-center w-[40%] h-full font-circe text-middle text-white pl-8;
+  }
 
-.minus,
-.plus {
-  @apply h-full flex items-center justify-center text-white transition-all cursor-pointer
-    hover:bg-color-hover
-    disabled:bg-color-divider disabled:cursor-default;
-}
+  .minus,
+  .plus {
+    @apply h-full flex items-center justify-center text-white transition-all cursor-pointer
+      hover:bg-color-hover
+      disabled:bg-color-divider disabled:cursor-default;
+  }
 
-.number {
-  @apply font-circe text-middle justify-center w-full text-center bg-transparent text-white
-    rounded-none outline-none;
+  .number {
+    @apply font-circe text-middle justify-center w-full text-center bg-transparent text-white
+      rounded-none outline-none;
+  }
 }
 
 .stocknum {
@@ -105,6 +106,12 @@
 }
 
 .size {
-  @apply col-start-2 col-end-3 row-start-9 row-end-10 mt-14 ml-[6px]
-  mobile:col-start-1 mobile:col-end-2 mobile:row-start-9 mobile:row-end-10 mobile:mt-0;
+  @apply col-start-2 col-end-3 row-start-10 row-end-11  ml-[6px] 
+  mobile:col-start-1 mobile:col-end-2 mobile:row-start-10 mobile:row-end-11;
+}
+
+.color {
+  @apply col-start-2 col-end-3 row-start-9 row-end-10 ml-[6px]
+    max-w-xl w-full grid grid-cols-[116px_1fr] py-5 mt-16 
+    mobile:col-start-1 mobile:col-end-2 mobile:row-start-9 mobile:row-end-10 mobile:mt-0;
 }

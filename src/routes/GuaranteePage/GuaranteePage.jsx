@@ -4,7 +4,7 @@ import { guaranteeData } from '../../utils'
 export const GuaranteePage = () => {
   return (
     <main className="main">
-      <header className="accordion__header" >
+      <header className="header-info" >
       <Breadcrumbs current={"гарантії"}/>
         <h1 className="txt-xl mg-0" >гарантії</h1>
       </header>

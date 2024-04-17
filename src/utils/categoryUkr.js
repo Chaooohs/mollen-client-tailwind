@@ -23,6 +23,26 @@ export const categoryUkr = (b) => {
       return "спальня"
     case "kitchen":
       return "кухня"
+    case "black":
+      return "чорний"
+    case "blue":
+      return "синiй"
+    case "yellow":
+      return "жовтий"
+    case "green":
+      return "зелений"
+    case "red":
+      return "червоний"
+    case "gray":
+      return "сірий"
+    case "orange":
+      return "помаранчевий"
+    case "coral":
+      return "кораловий"
+    case "violet":
+      return "фіолетовий"
+    case "white":
+      return "бiлий"
     default:
       return b
   }

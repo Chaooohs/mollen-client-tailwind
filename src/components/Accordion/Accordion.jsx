@@ -4,9 +4,9 @@ import plus from "/public/images/svg/plus.svg";
 import styles from "./Accordion.module.scss";
 
 export const Accordion = ({ title, content }) => {
+  const ref = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const [isToggle, setIsToggle] = useState(false);
-  const ref = useRef();
 
   useEffect(() => {
     setIsOpen(true);

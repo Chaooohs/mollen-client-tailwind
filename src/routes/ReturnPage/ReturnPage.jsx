@@ -4,7 +4,7 @@ import { returnData } from '../../utils'
 export const ReturnPage = () => {
   return (
     <main className="main">
-      <header className="accordion__header" >
+      <header className="header-info" >
         <Breadcrumbs current={"повернення"} />
         <h1 className="heading" >повернення та обмін</h1>
       </header>
