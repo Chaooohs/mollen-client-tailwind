@@ -64,23 +64,23 @@
     mobile:col-start-1 mobile:col-end-2 mobile:row-start-3 mobile:row-end-4 mobile:mt-10 mobile:mb-6;
 
   &__box {
-    @apply flex flex-wrap items-end gap-x-12;
+    @apply flex flex-wrap items-end gap-x-12 laptop:gap-y-6;
+    
+    .through {
+      @apply font-circe text-2xl leading-6 line-through text-color-text-secondary
+        mobile:leading-8;
+    }
   }
 }
 
-.through {
-  @apply font-circe text-2xl leading-6 line-through text-color-text-secondary;
-}
-
 .box {
-  @apply col-start-2 col-end-3 row-start-8 row-end-9 flex justify-center items-center w-72 h-14 rounded-[60px]
+  @apply col-start-2 col-end-3 row-start-8 row-end-9 flex justify-center items-center gap-x-5 w-72 h-14 rounded-[60px]
     mobile:col-start-1 mobile:col-end-2 mobile:row-start-11 mobile:row-end-12
     mobile:w-full mobile:rounded-none
     bg-color-primary;
 
   .button {
     @apply w-[60%] h-full rounded-e-[60px] text-sm text-white tracking-current uppercase px-8 transition-all
-      hover:bg-color-hover
       disabled:bg-color-divider disabled:cursor-default;
   }
 
@@ -91,7 +91,6 @@
   .minus,
   .plus {
     @apply h-full flex items-center justify-center text-white transition-all cursor-pointer
-      hover:bg-color-hover
       disabled:bg-color-divider disabled:cursor-default;
   }
 
@@ -114,4 +113,13 @@
   @apply col-start-2 col-end-3 row-start-9 row-end-10 ml-[6px]
     max-w-xl w-full grid grid-cols-[116px_1fr] py-5 mt-16 
     mobile:col-start-1 mobile:col-end-2 mobile:row-start-9 mobile:row-end-10 mobile:mt-0;
+}
+
+@media (hover: hover) {
+
+  .button,
+  .minus,
+  .plus {
+    @apply hover:bg-color-hover;
+  }
 }

@@ -105,12 +105,6 @@ input:-webkit-autofill:focus {
   @apply text-xlarge uppercase m-0 mobile:text-[28px] mobile:leading-9;
 }
 
-.fs-10 {
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: lowercase;
-}
-
 .accordion {
   display: grid;
   grid-template-rows: 0fr;
@@ -133,174 +127,14 @@ input:-webkit-autofill:focus {
 
 /* #endregion */
 
-/* #region text */
+@media (hover: hover) {
 
-.txt-xl {
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 52px;
-  /* letter-spacing: $letter-spacing; */
-  text-transform: uppercase;
-}
-
-.txt-lg {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
-  /* letter-spacing: $letter-spacing; */
-  text-transform: uppercase;
-}
-
-.txt-md {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  /* letter-spacing: $letter-spacing; */
-  text-transform: uppercase;
-}
-
-.txt-circe-md {
-  /* font-family: $circe; */
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 24px;
-}
-
-.txt-circe-sm {
-  /* font-family: $circe; */
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 24px;
-}
-
-/* #endregion */
-
-/* #region button */
-
-.button {
-  height: 60px;
-  border-radius: 60px;
-  /* background-color: $color-primary; */
-
-  /* color: $color-text-button; */
-  /* transition: $transition; */
-
-  /* &:hover {
-    background-color: $hover;
-  } */
-}
-
-/* #endregion */
-
-/* #region transition */
-
-/* .entering,
-.entered {
-  transform: translateX(0);
-  transition: transform 300ms;
-}
-
-.exiting,
-.exited {
-  transform: translateX(-100%);
-  transition: transform 300ms;
-} */
-
-/* .card-elem {
-  &-enter {
-    opacity: 0;
-    /* max-height: 0; */
-    /* grid-template-rows: 0fr; */
-    /* overflow: hidden; */
-  /* } */
-
-  /* &-enter-done { */
-    /* opacity: 1; */
-    /* max-height: 500px; */
-    /* grid-template-rows: 1fr; */
-    /* transition: opacity 250ms, max-height 300ms, box-shadow 300ms; */
-    /* transition: all 1s linear; */
-  /* } */
-
-  /* &-exit { */
-    /* opacity: 0;
-    /* max-height: 500px; */
-    /* grid-template-rows: 1fr; */
-    /* transition: opacity 250ms, max-height 300ms, box-shadow 300ms; */
-    /* transition: all 1s linear; */
-  /* } */ 
-
-  /* &-exit-done {
-    opacity: 0;
-    /* grid-template-rows: 0fr; */
-    /* overflow: hidden; */
-    /* max-height: 0; */
-  /* } */ 
-/* } */ 
-
-/* .accordion-open {
-  &-enter {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
+  .btn{
+    @apply hover:bg-color-hover;
   }
+}
 
-  &-enter-done {
-    opacity: 1;
-    max-height: 1400px;
-    transition: opacity 300ms, max-height 300ms;
-    margin-top: 24px;
-  }
-
-  &-exit {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 300ms, max-height 300ms;
-    margin-top: 24px;
-  }
-
-  &-exit-done {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-  }
-} */
-
-/* .selector { */
-  /* &-enter { */
-    /* opacity: 0; */
-    // max-height: 0;
-    // max-height: 200px;
-    /* overflow: hidden; */
-  /* } */
-
-  /* &-enter-done { */
-    /* opacity: 1; */
-    // max-height: 200px;
-    /* transition: opacity 200ms, max-height 200ms; */
-    /* overflow: auto; */
-  /* } */
-
-  /* &-exit { */
-    /* opacity: 0; */
-    // max-height: 0;
-    // max-height: 200px;
-    /* overflow: hidden; */
-    /* transition: opacity 200ms, max-height 200ms; */
-  /* } */
-
-  /* &-exit-done { */
-    // max-height: 200px;
-    /* opacity: 0; */
-    // max-height: 0;
-    /* overflow: hidden; */
-  /* } */
-/* } */
-
-/* #endregion */
-
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .grid-lt {
     grid-template-columns: 1fr;
   }
@@ -308,33 +142,19 @@ input:-webkit-autofill:focus {
   .grid-2col {
     grid-template-columns: 1fr;
   }
+
+  .btn {
+    @apply laptop:w-full rounded-none;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .main {
     margin-top: 64px;
   }
 
   .cards-lt {
     grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
-  }
-
-  .txt-xl {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .txt-lg {
-    font-size: 16px;
-  }
-
-  .txt_md {
-    font-size: 12px;
-  }
-
-  .txt-circe-md {
-    font-size: 14px;
-    line-height: 22px;
   }
 
   .header-info {

@@ -33,7 +33,7 @@ export const CartSidebar = () => {
           {`${(totalPrice - toralPriceWithDiscount).toLocaleString("ru")} ₴`}
         </span>
       </div>
-      <button className={styles.button}>замовити</button>
+      <button className="btn w-72 mt-8 laptop:fixed laptop:bottom-0 laptop:left-0" >замовити</button>
     </aside>
   )
 }

@@ -7,7 +7,7 @@ export const subcatwomen = ["clothes", "accessories", "cosmetics"]
 
 export const subcathome = ["lounge", "bathroom", "bedroom", "kitchen"]
 
-export const colors = ["blue", "yellow", "green", "red", "gray", "black", "orange", "coral", "violet", "white"]
+export const colors = ["blue", "yellow", "green", "red", "gray", "black", "orange", "coral", "violet", "white", "pink"]
 
 export const sizeClothes = ["S", "M", "L", "XL", "XXL", "3XL", "one",]
 

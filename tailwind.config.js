@@ -63,28 +63,6 @@ export default {
       transitionTimingFunction: {
         DEFAULT: 'linear',
       },
-      keyframes: {
-        fadeIn: {
-          from: {
-            maxHeight: '0px',
-          },
-          to: {
-            maxHeight: '1200px',
-          }
-        },
-        fadeOut: {
-          from: {
-            maxHeight: '1200px',
-          },
-          to: {
-            maxHeight: '0px',
-          }
-        }
-      },
-      animation: {
-        fadeIn: 'fadeIn 1s linear',
-        fadeOut: 'fadeOut 1s linear',
-      }
     },
   },
   plugins: [
@@ -104,9 +82,9 @@ export default {
           transition: 'background-color',
           transitionDuration: theme('transitionDuration.DEFAULT'),
           transitionTimingFunction: theme('transitionTimingFunction.DEFAULT'),
-          '&:hover': {
-            backgroundColor: theme('colors.color-hover')
-          }
+          // '&:hover': {
+          //   backgroundColor: theme('colors.color-hover')
+          // }
         },
       })
     })

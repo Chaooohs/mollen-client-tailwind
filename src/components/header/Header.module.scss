@@ -1,19 +1,15 @@
 .header {
   @apply h-[72px] bg-transparent absolute z-10 top-0 w-full grid items-center gap-x-10 py-0 px-10
     mobile:h-16 mobile:gap-x-5 mobile:px-4;
-    grid-template-columns: auto auto 3fr auto;
+  grid-template-columns: auto auto 3fr auto;
 }
 
 .dots {
   @apply w-6 mobile:rotate-90;
-  & svg {
-    @apply hover:fill-color-icon-secondary transition-all;
-    transition: all 0.2s linear;
-  }
 }
 
 .link {
-  @apply text-middle tracking-[4px] transition-all;
+  @apply text-small tracking-[4px] uppercase transition-all;
 }
 
 .white {
@@ -32,29 +28,34 @@
   @apply flex gap-x-3 justify-self-end w-fit;
 }
 
-.search:hover .link {
-  @apply text-color-icon-secondary;
-}
-
 .bin {
   @apply relative w-10 h-10 flex items-center justify-center rounded-full
-    bg-color-primary hover:bg-color-hover transition-all
+    bg-color-primary transition-all
     mobile:w-8 mobile:h-8;
 
   .icon {
     @apply w-5;
-
-    & path {
-      @apply transition-all;
-    }
-  }
-
-  &:hover .icon path {
-    @apply fill-color-icon-secondary;
   }
 }
 
 .count {
   @apply absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#d34546]
     flex justify-center items-center font-circe text-xs text-white;
+}
+
+@media (hover: hover) {
+
+  .dots {
+    & svg {
+      @apply hover:fill-color-icon-secondary transition-all;
+    }
+  }
+
+  .search:hover .link {
+    @apply text-color-icon-secondary;
+  }
+
+  .bin {
+    @apply hover:bg-color-hover;
+  }
 }

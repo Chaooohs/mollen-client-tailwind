@@ -78,7 +78,7 @@ export const Cards = ({ el }) => {
         <div className={styles.body} ref={ref}>
           <div className="overflow-hidden">
             <div className={styles.elem} >
-              <button className={styles.button} >
+              <button className="btn w-56 mx-auto mb-8" >
                 Детальніше
               </button>
             </div>

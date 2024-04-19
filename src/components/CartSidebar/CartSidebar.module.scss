@@ -26,8 +26,3 @@
 .num {
   @apply text-color-text-primary ml-auto;
 }
-
-.button {
-  @apply btn w-72 mt-8
-    desktop:w-full desktop:fixed desktop:bottom-0 desktop:left-0 desktop:rounded-none;
-}

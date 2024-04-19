@@ -12,7 +12,7 @@
 }
 
 .value {
-  @apply font-orchidea tracking-[2px] text-color-text-primary ml-16
+  @apply font-orchidea  text-base tracking-[1px] text-color-text-primary ml-16
     row-start-1 row-end-2 col-start-2 col-end-3;
 }
 
@@ -28,7 +28,7 @@
     @apply list-none m-0 p-0;
     
     .item {
-      @apply p-3 hover:bg-color-divider tracking-[2px];
+      @apply p-3 hover:bg-color-divider tracking-[1px] ;
     }
   }
 }

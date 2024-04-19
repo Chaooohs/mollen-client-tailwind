@@ -1,12 +1,6 @@
 .card {
   container-type: inline-size;
   @apply relative border  border-color-divider bg-white transition-all z-20 -m-px;
-
-  &:hover {
-    box-shadow: 0px 4px 24px 0px rgba(46, 67, 108, 0.15);
-    /* box-shadow: 0px 5px 10px 0px rgba(46, 67, 108, 0.15); */
-    z-index: 99;
-  }
 }
 
 .percents {
@@ -62,13 +56,18 @@
   .elem {
     @apply w-full  bg-white pb-4;
   }
-
-  .button {
-    @apply btn w-56 mx-auto mb-8;
-  }
 }
 
 .open{
   grid-template-rows: 1fr;
   box-shadow: 0px 24px 24px 0px rgba(46, 67, 108, 0.2)
+}
+
+@media (hover: hover) {
+
+  .card:hover {
+    box-shadow: 0px 4px 24px 0px rgba(46, 67, 108, 0.15);
+    /* box-shadow: 0px 5px 10px 0px rgba(46, 67, 108, 0.15); */
+    z-index: 99;
+  }
 }

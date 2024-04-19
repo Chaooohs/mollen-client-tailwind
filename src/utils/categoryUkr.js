@@ -43,6 +43,10 @@ export const categoryUkr = (b) => {
       return "фіолетовий"
     case "white":
       return "бiлий"
+    case "pink":
+      return "рожевий"
+    case "none":
+      return "безбарвний"
     default:
       return b
   }
